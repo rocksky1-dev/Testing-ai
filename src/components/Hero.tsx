@@ -1,36 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Rocket } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 px-6 text-center relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-primary/20 blur-[120px] rounded-full -z-10" />
-      
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full glass text-xs font-medium text-brand-primary mb-6">
-          <Sparkles size={14} />
-          <span>New: AI Agent v2.0 is here</span>
+    <section className="pt-32 pb-20 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
+          <Rocket className="w-4 h-4 text-indigo-400" />
+          <span className="text-sm font-medium text-indigo-300">New: V2 Update is Live!</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-          Unlock Infinite <br /> Intelligence.
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+          Intelligence Without <br />
+          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Boundaries
+          </span>
         </h1>
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-          Automate your complex workflows with the world's most advanced neural network. Designed for creators, engineers, and dreamers.
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+          Experience the next generation of AI. Created by SHIVAM KUMAR, Infinity Ai is designed to assist, create, and innovate alongside you.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-white text-black px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-gray-200 transition">
-            Start Building Free <ArrowRight size={18} />
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <button className="px-8 py-4 bg-indigo-600 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+            Start Building Free
           </button>
-          <button className="glass px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition">
-            Watch Demo
+          <button className="px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+            View Demo
           </button>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
