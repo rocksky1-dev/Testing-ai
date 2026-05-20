@@ -1,10 +1,14 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Navbar from '@/components/Navbar';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Infinity AI | The Future of Intelligence',
-  description: 'Empower your workflow with Infinity AI',
+  title: "Infinity Ai | Your Ultimate Companion",
+  description: "Created by SHIVAM KUMAR",
 };
 
 export default function RootLayout({
@@ -14,9 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <Navbar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
